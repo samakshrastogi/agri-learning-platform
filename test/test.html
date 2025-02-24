@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <h1 class="text-3xl font-semibold text-center mb-5 text-gray-800">Test</h1>
+        <div id="test-error" class="text-red-500 text-center mb-3"></div>
+        <div id="question-container" class="bg-white rounded-lg shadow-md p-5 mb-4">
+            <h2 id="question" class="text-2xl font-semibold text-gray-700 mb-3"></h2>
+            <div id="options" class="grid gap-3">
+            </div>
+        </div>
+        <div id="navigation" class="flex justify-between">
+            <button id="prev-button" class="btn btn-secondary rounded-md py-2 px-4"
+                style="display: none;">Previous</button>
+            <button id="next-button" class="btn btn-primary rounded-md py-2 px-4">Next</button>
+            <button id="submit-button" class="btn btn-success rounded-md py-2 px-4"
+                style="display: none;">Submit</button>
+        </div>
+        <div id="timer" class="text-center mt-4 text-gray-600">Time Remaining: <span id="time"></span></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        // Load test questions on test page
+        if (questionContainer) {
+            let username = localStorage.getItem('loggedInUsername')
+            const testName = localStorage.getItem('currentTest');
+            let testTaken = localStorage.getItem(username + '-' + testName);
+
+            if (testTaken) {
+                window.location.href = '../scoreboard.html';
+                return;
+            }
+            loadQuestions(testName);
+        }
+    </script>
+</body>
+
+</html>

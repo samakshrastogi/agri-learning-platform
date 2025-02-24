@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg rounded-lg">
+                    <div class="card-body p-5">
+                        <h1 class="text-3xl font-semibold text-center mb-4 text-gray-800">Login</h1>
+                        <div id="login-error" class="text-red-500 text-center mb-3"></div>
+                        <form id="login-form">
+                            <div class="mb-3">
+                                <label for="username" class="form-label text-gray-700 font-medium">Username:</label>
+                                <input type="text" class="form-control rounded-md shadow-sm border-gray-300 focus:border-blue-500 focus:ring-blue-500" id="username" name="username" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="form-label text-gray-700 font-medium">Password:</label>
+                                <input type="password" class="form-control rounded-md shadow-sm border-gray-300 focus:border-blue-500 focus:ring-blue-500" id="password" name="password" required>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary rounded-md py-2">Login</button>
+                            </div>
+                        </form>
+                        <!-- <div class="mt-4 text-center">
+                            <a href="forgot_password.html" class="text-blue-500 hover:text-blue-700">Forgot Password?</a>
+                            <p class="mt-2">Don't have an account? <a href="create_account.html" class="text-blue-500 hover:text-blue-700">Create Account</a></p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

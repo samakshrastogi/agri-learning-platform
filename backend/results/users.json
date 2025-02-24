@@ -1,0 +1,30 @@
+[
+    {
+        "username": "john.doe",
+        "password": "password123",
+        "dob": "1990-05-15",
+        "securityQuestion": "pet",
+        "securityAnswer": "buddy"
+    },
+    {
+        "username": "jane.smith",
+        "password": "securepass",
+        "dob": "1985-12-01",
+        "securityQuestion": "city",
+        "securityAnswer": "new york"
+    },
+    {
+        "username": "test.user",
+        "password": "testpass",
+        "dob": "1995-08-20",
+        "securityQuestion": "color",
+        "securityAnswer": "blue"
+    },
+    {
+        "username": "agri.developer2402",
+        "password": "2402",
+        "dob": "2000-01-01",
+        "securityQuestion": "city",
+        "securityAnswer": "test"
+    }
+]

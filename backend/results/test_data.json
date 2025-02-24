@@ -1,0 +1,110 @@
+{
+    "test1": {
+      "questions": [
+        {
+          "question": "What is the capital of France?",
+          "options": ["London", "Paris", "Berlin", "Rome"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 2 + 2?",
+          "options": ["3", "4", "5", "6"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which planet is known as the Red Planet?",
+          "options": ["Earth", "Mars", "Venus", "Jupiter"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is the largest mammal?",
+          "options": ["Elephant", "Blue Whale", "Giraffe", "Lion"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which gas do plants absorb from the atmosphere?",
+          "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is the chemical symbol for gold?",
+          "options": ["Ag", "Au", "Fe", "Cu"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is the largest ocean on Earth?",
+          "options": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean", "Arctic Ocean"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which country is home to the Great Barrier Reef?",
+          "options": ["Australia", "Brazil", "India", "Mexico"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "What is the smallest country in the world?",
+          "options": ["Monaco", "Vatican City", "Maldives", "San Marino"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is the main function of chlorophyll in plants?",
+          "options": ["Absorbing sunlight", "Transporting water", "Providing structural support", "Protecting against pests"],
+          "correctAnswer": 0
+        }
+      ]
+    },
+      "test2": {
+      "questions": [
+        {
+          "question": "What is the capital of spain?",
+          "options": ["London", "Paris", "Berlin", "Madrid"],
+          "correctAnswer": 3
+        },
+        {
+          "question": "What is 3 + 3?",
+          "options": ["3", "4", "6", "9"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which planet is known as the blue Planet?",
+          "options": ["Earth", "Mars", "Venus", "Jupiter"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "What is the largest animal?",
+          "options": ["Elephant", "Blue Whale", "Giraffe", "Lion"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which gas do human absorb from the atmosphere?",
+          "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "What is the chemical symbol for silver?",
+          "options": ["Ag", "Au", "Fe", "Cu"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "What is the smallest ocean on Earth?",
+          "options": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean", "Arctic Ocean"],
+          "correctAnswer": 3
+        },
+        {
+          "question": "Which country is home to the Amazon Rain Forest?",
+          "options": ["Australia", "Brazil", "India", "Mexico"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is the largest country in the world?",
+          "options": ["Monaco", "Russia", "Maldives", "San Marino"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is the main function of xylem in plants?",
+          "options": ["Absorbing sunlight", "Transporting water", "Providing structural support", "Protecting against pests"],
+          "correctAnswer": 1
+        }
+      ]
+    }
+  }

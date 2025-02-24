@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <h1 class="text-3xl font-semibold text-center mb-5 text-gray-800">Scoreboard</h1>
+        <div id="scoreboard-data" class="bg-white rounded-lg shadow-md p-5">
+            <p class="text-gray-700 mb-2">Questions Attempted: <span id="attempted" class="font-semibold"></span></p>
+            <p class="text-gray-700 mb-2">Questions Answered: <span id="answered" class="font-semibold"></span></p>
+            <p class="text-gray-700 mb-2">Questions Correct: <span id="correct" class="font-semibold"></span></p>
+            <p class="text-gray-700 mb-2">Questions Incorrect: <span id="incorrect" class="font-semibold"></span></p>
+            <p class="text-gray-700 mb-2">Obtained Score: <span id="obtained-score" class="font-semibold"></span> / <span id="total-score" class="font-semibold"></span></p>
+            <p class="text-gray-700 mb-2">Percentage: <span id="percentage" class="font-semibold"></span>%</p>
+        </div>
+        <div class="text-center mt-4">
+            <button id="dashboard-button" class="btn btn-primary rounded-md py-2 px-4">Back to Dashboard</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

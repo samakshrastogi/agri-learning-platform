@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg rounded-lg">
+                    <div class="card-body p-5">
+                        <h1 class="text-3xl font-semibold text-center mb-4 text-gray-800">Create Account</h1>
+                        <div id="create-account-error" class="text-red-500 text-center mb-3"></div>
+                        <form id="create-account-form">
+                            <div class="mb-3">
+                                <label for="new-username" class="form-label text-gray-700 font-medium">Username:</label>
+                                <input type="text" class="form-control rounded-md shadow-sm border-gray-300 focus:border-blue-500 focus:ring-blue-500" id="new-username" name="new-username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="new-password" class="form-label text-gray-700 font-medium">Password:</label>
+                                <input type="password" class="form-control rounded-md shadow-sm border-gray-300 focus:border-blue-500 focus:ring-blue-500" id="new-password" name="new-password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dob" class="form-label text-gray-700 font-medium">Date of Birth:</label>
+                                <input type="date" class="form-control rounded-md shadow-sm border-gray-300 focus:border-blue-500 focus:ring-blue-500" id="dob" name="dob" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="security-question" class="form-label text-gray-700 font-medium">Security Question:</label>
+                                <select class="form-select rounded-md shadow-sm border-gray-300 focus:border-blue-500 focus:ring-blue-500" id="security-question" name="security-question" required>
+                                    <option value="">Select a question</option>
+                                    <option value="pet">What is your first pet's name?</option>
+                                    <option value="city">What city were you born in?</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="security-answer" class="form-label text-gray-700 font-medium">Answer:</label>
+                                <input type="text" class="form-control rounded-md shadow-sm border-gray-300 focus:border-blue-500 focus:ring-blue-500" id="security-answer" name="security-answer" required>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary rounded-md py-2">Create Account</button>
+                            </div>
+                        </form>
+                        <div class="mt-4 text-center">
+                            <a href="index.html" class="text-blue-500 hover:text-blue-700">Back to Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

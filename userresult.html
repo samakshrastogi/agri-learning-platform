@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Results</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <h1 class="text-3xl font-semibold text-center mb-5 text-gray-800">User Test Results</h1>
+        <div id="results-container" class="bg-white rounded-lg shadow-md p-5"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const resultsContainer = document.getElementById('results-container');
+            let htmlContent = '';
+            // Get all test names
+            let testNames = ['test1', 'test2', 'test3', 'test4', 'test5', 'test6', 'test7', 'test8', 'test9', 'test10'];
+
+            // Iterate through each test name
+            testNames.forEach(testName => {
+                // Retrieve test results from local storage for the current test name
+                let existingResults = localStorage.getItem('test' + testName);
+                let testResults = existingResults ? JSON.parse(existingResults) : [];
+
+                // Check if there are any test results for the current test name
+                if (!Array.isArray(testResults) || testResults.length === 0) {
+                    return; // Skip to the next test name if no results are found
+                }
+
+                htmlContent += `<h3 class="text-xl font-semibold mb-2 text-gray-700">Test Name: ${testName}</h3>`;
+                htmlContent += '<ul class="list-disc pl-5">';
+
+                // Function to delete test result from local storage
+                function deleteTestResult(timestamp) {
+                    let existingResults = localStorage.getItem('test' + testName);
+                    let testResults = existingResults ? JSON.parse(existingResults) : [];
+                    testResults = testResults.filter(result => result.timestamp !== timestamp);
+                    localStorage.setItem('test' + testName, JSON.stringify(testResults));
+                    displayResults(); // Refresh the displayed results
+                }
+
+                // Function to display the results
+                function displayResults() {
+                    resultsContainer.innerHTML = ''; // Clear previous content before re-rendering
+
+                    testNames.forEach(testName => {
+                        let existingResults = localStorage.getItem('test' + testName);
+                        let testResults = existingResults ? JSON.parse(existingResults) : [];
+
+                        if (!Array.isArray(testResults) || testResults.length === 0) {
+                            return; // Skip to the next test name if no results are found
+                        }
+
+                        htmlContent = `<h3 class="text-xl font-semibold mb-2 text-gray-700">Test Name: ${testName}</h3>`;
+                        htmlContent += '<ul class="list-disc pl-5">';
+
+                        testResults.forEach(result => {
+                            const date = new Date(result.timestamp);
+                            const dateTimeString = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+                            const totalScore = result.totalQuestions * 4;
+                            const percentage = (result.score / totalScore) * 100;
+
+                            htmlContent += `<li class="mb-3 text-gray-600">
+                                <span class="font-semibold">${result.username}</span> -
+                                Score: ${result.score},
+                                Percentage : ${percentage},
+                                Date/Time: ${dateTimeString}
+                                <ul>
+                                    <li>Correct Answers : ${result.correctAnswers}</li>
+                                    <li>Incorrect Answers : ${result.incorrectAnswers}</li>
+                                    <li>Skipped Questions : ${result.skippedQuestions}</li>
+                                    <li><button class="delete-button text-red-500 hover:text-red-700" data-timestamp="${result.timestamp}">Delete</button></li>
+                                </ul>
+                            </li>`;
+                        });
+
+                        htmlContent += '</ul>';
+                        resultsContainer.innerHTML += htmlContent
+                        const deleteButtons = document.querySelectorAll('.delete-button');
+                        deleteButtons.forEach(button => {
+                            button.addEventListener('click', function () {
+                                const timestamp = this.dataset.timestamp;
+                                deleteTestResult(timestamp);
+                            });
+                        });
+
+                    });
+                }
+
+                // Display test results for each test name
+                resultsContainer.innerHTML = '';
+                displayResults();
+            });
+        });
+    </script>
+</body>
+
+</html>
